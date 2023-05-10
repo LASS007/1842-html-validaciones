@@ -24,6 +24,7 @@
                 <fieldset>
                     <legend class="form__label">Información básica</legend>
                     <div class="input-container">
+                        <!-- El required hace que sea campo requerido y que te salga una etiqueta de requerido visualmente -->
                         <input name="name" id="name" class="input" type="text" placeholder="Nombre" required>
                         <label class="input-label" for="name">Nombre</label>
                         <span class="input-message-error">Este campo no es valido</span>
@@ -34,7 +35,7 @@
                         <span class="input-message-error">Este campo no es valido</span>
                     </div>
                     <div class="input-container">
-                        <!-- al final es almenos 6 y max 12 caracteres -->
+                        <!-- al final es almenos 6 y max 12 caracteres, se esta utilizando un regex password, mientras que la etiqueta title nos permite introducir un mesaje perzonalizado en caso de que no cumpla con las codiciones del input -->
                         <input name="password" id="password" class="input" type="password" placeholder="Contraseña" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ .!@$%^&(){}[]:;<>,.?/~_+-=|\]).{6,12}$" title="Al menos 6 caracteres, maximo 12, al menos una letra minuscula, una mayuscula, un numero y no debe contener caracteres especiales">
                         <label class="input-label" for="password">Contraseña</label>
                         <span class="input-message-error">Este campo no es valido</span>
